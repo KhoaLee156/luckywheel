@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucky Wheel - Web3</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.2/dist/ethers.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎡 Lucky Wheel</h1>
+    <p id="wallet-address">🧩 Connect your wallet to begin</p>
+    <button id="connect-wallet">Connect Wallet</button>
+
+    <div class="game-ui">
+      <div class="wheel-container">
+        <canvas id="wheel" width="400" height="400"></canvas>
+        <button id="spin">SPIN</button>
+      </div>
+
+      <div class="status-panel">
+        <div id="plays-left">🎮 Spins left today: 3</div>
+        <div id="score">Score: 0</div>
+        <button id="buy-spins">Buy More Spins (0.1 ETH)</button>
+        <div id="result"></div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="spin-sound" src="/public/spin.mp3" preload="auto"></audio>
+  <audio id="win-sound" src="/public/win.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
